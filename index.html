@@ -1,0 +1,177 @@
+<!-- BEGIN GENERAL STYLES -->
+<!-------------------------------------------------------------------------->
+
+<style>
+  body { background-color: #00273a !important }
+</style>
+
+
+<style>
+  .name-style 
+  {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 28px;
+    line-height: 1.6;       
+    text-align: left;    
+    margin-bottom: 18px;    
+    padding: 10px;           
+    margin-left: 0px
+  }
+</style>
+
+
+<style>
+  .button-style 
+  {
+    display: inline-block; 
+    padding: 8px 16px; 
+    background-color: #5975ad; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 4px; 
+    margin-right: 5px; 
+    font-weight: bold
+  }
+</style>
+
+
+<style>
+  .table-element-style
+  {
+    vertical-align: top; 
+    width: 50%
+  } 
+</style>
+
+<!-- END GENERAL STYLES -->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+<br></br>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 4vh; gap: 0px;">
+    <p class = "name-style"><b>Adrian Palamarev<b> </p>
+</div>
+<br></br>
+<div style="display: flex; flex-direction: column; height: 20vh; gap: 0.2px;">
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 0vh; gap: 0.2px;">
+        <a class = "button-style" href="#about-me-text-region">About Me</a>
+        <a class = "button-style" href="#projects-text-region">Projects</a>
+        <a class = "button-style" href="#resume-text-region"  >Resume</a>
+        <a class = "button-style" href="#blog-text-region"    >Blog</a>
+</div>
+
+<br></br>
+
+
+
+<div id="about-me-text-region">
+  <p style = "font-weight: bold; font-size: 24px; margin-bottom: -6px" >About Me</p><hr></hr>
+  <p style="font-weight: normal">Hi! I am a second-year student studying Robotics and Computer Science at Carnegie Mellon University. I am particularly interested in low-level optimizations, data structure design, numerical approaches, and algorithm development, particularly using C++. I am also committed to designing clean software, leveraging modularity, and creating precise documentation.</p>  
+  <p style = "margin-bottom: 0px"> <b>Languages</b>
+  <p style = "font-weight: normal">C++, C#, C, Python, SML, Rust, Java, HTML, CSS, JavaScript, WASM, SQL, Typst, LaTeX</p>
+  <p style = "margin-bottom: 0px"> <b>Frameworks </b> 
+  <p style="font-weight: normal">CUDA, SIMD, ROS2, PyTorch, .Net, Blend2D</p>
+</div>
+
+<div id="projects-text-region">
+  
+  <p style = "font-weight: bold; font-size: 24px; margin-bottom: -6px" >Projects</p><hr></hr>
+
+  <table>
+  <tr>
+  <td class = "table-element-style">
+      <h3><b>Sigma UI</b> [ C++]</h3> 
+      <p style="font-weight: normal">I am currently implementing a user interface framework in C++ from the ground-up, using the hash table, memory allocator, and other data structures and algorithms I previously implemented, along with Blend2D for primitive graphical components. 
+      <br></br>
+      This is motivated by the general lack of robust user interface libraries for C++, and testing the data structures I implemented as part of a larger project. 
+      <br></br>
+      Through this, I am learning a lot about handling ownership carefully, and structuring major projects with many interlinked components. </p>
+    </td>
+  <td class = "table-element-style">
+      <h3><b>Cross-Platform, Parallel-Friendly Memory Allocator</b> [C++]</h3> 
+      <p style="font-weight: normal">Designed and implemented a highly efficient memory allocator, leveraging paged data structures, and relying on augmented stack and array components. 
+      <br></br>
+      This allocator has very strong scaling properties, and its internal representation allows the costs independent from memory access to remain fairly constant as the number of allocated blocks and previously freed blocks increases. 
+      <br></br>
+  I achieved a speedup of 1.44 times over Microsoft’s mimalloc in a high-churn, 10 million operation test with a large working set. This speedup increases further as the peak number of allocated memory blocks grows. </p>
+    </td>
+  </tr>
+  <tr> 
+  <td class = "table-element-style"">
+    <h3><b>Web Assembly Teaching Game</b> [Rust, WASM]	 </h3>
+      <p style="font-weight: normal">
+      I worked in a team to create an interactive game that teaches learners Web Assembly Programming through several levels, for HackCMU 2025. In the starting levels, players move a charismatic cube forward for a few steps, while the solutions to later levels involve complex operations or nested loops.   
+      </p>
+<img src="Map.png" alt="Players must write WASM code to guide a cube along this spiral" width="162"/>
+<br></br>
+Players must write WASM code to guide a cube along this spiral
+    </td> 
+    <td class = "table-element-style">
+      <h3><b>Efficient Hash Table</b> [C++, SIMD]</h3>
+      <p style="font-weight: normal"> I designed and implemented a highly optimized, memory-efficient flat hash table in C++ using variable linear probing and SIMD operations.
+      <br></br>
+      Experimented with different probing strategies to handle poorly distributed data, and achieved very similar performance for different sets of keys. Achieved comparable or slightly better insertion and lookup performance to tables using Google’s SwissTable layout. </p>
+      <img src="Table.png" alt="Hash Table" width="455"/>
+      <br></br>
+      Hash Table
+    </td>
+  </tr>
+  <tr>
+  <td class = "table-element-style">
+      <h3><b>Finance Tracker</b> &nbsp [C#, .NET, SQL]</h3>
+      <p style="font-weight: normal">
+      I implemented a full‑stack, client‑server application for tracking categorized incomes and expenditures. I used C# and the .NET framework for the user interface, and an SQL database to securely store sensitive transaction and user information. 
+      <br></br>Additional features include plotting the progression of an account's balance over time, filtering transactions, and analyzing expenses across different categories. 
+      <br></br>
+    </p>
+    <img src="FinanceTracker.png" alt="Main Finance Tracker Screen" width="700"/>
+    <br></br>
+    Main Finance Tracker Screen
+    </td>
+    <td class = "table-element-style">
+      <h3><b>Radio Propagation Plot Digitalization Software</b> [C#, .NET] </h3>
+      <p style="font-weight: normal">I developed image processing algorithms in C# to digitize highly distorted plots using convolution and Fourier filtering. This reduced processing time by over 90%, eliminating many hours of human work for extracting points or tracing over graphs. This strategy allowed for an efficient replacement of the prior low-precision solution of using only 3-5 points per graph and linearly interpolating.  
+</p>
+<img src="Plot.png" alt="Plots" width="460"/>
+<br></br>
+An example image with much less distortion
+</td>
+  </tr>
+  <tr>
+    <td class = "table-element-style">
+      <h3><b>Math, Statistics, and Neural Network Libraries</b> [C++, CUDA]		 </h3>
+      <p style="font-weight: normal">Over several years, I aggregated my mathematics and neural network knowledge into C++ libraries while strengthening my proficiency. I wrote over 30,000 lines of code. In a major subproject, I designed and implemented a parser and interpreter for a simple mathematical language.
+      <br></br>
+      I also developed a neural network from scratch in C++, and trained it using matrix-based gradient descent algorithms. I gained substantial knowledge in GPU (CUDA) and CPU parallel programming, and created an optimized Matrix and Linear Algebra library.
+      </p>
+    </td>
+     <td class = "table-element-style">
+      <h3><b>VEX Robotics</b> [C++, LaTeX]</h3>
+      <p style="font-weight: normal">I competed for several years in the VEX Robotics competition, and gained a significant amount of software, hardware, and design experience. 
+      <br></br>
+      In particular, I implemented custom PID and odometry using a tracking wheel to achieve reliable robot navigation, and handled complex routines. I also created robot schematics, used prototype testing, and made use of decision matrices to select optimal designs. I documented these steps and decisions in very thorough design notebooks written in LaTeX </p>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<div id="resume-text-region">
+
+<p style = "font-weight: bold; font-size: 24px; margin-bottom: -6px" >Resume</p><hr></hr>
+
+<a href="./resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+
+</div>
+
+<div id="blog-text-region">
+  
+<p style = "font-weight: bold; font-size: 24px; margin-bottom: -6px" >Blog</p><hr></hr>
+
+ <p style="font-weight: normal">Coming Soon!</p>
+
+</div>
+
+<br></br>
